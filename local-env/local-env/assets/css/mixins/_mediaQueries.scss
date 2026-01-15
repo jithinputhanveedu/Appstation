@@ -1,0 +1,15 @@
+@mixin max($vw: 1200) {
+    @media (max-width: #{$vw}px) {
+        @content;
+    }
+}
+@mixin min($vw: 1200) {
+    @media (min-width: #{$vw}px) {
+        @content;
+    }
+}
+@mixin min-max($min-vw: 768,$max-vw: 1200,) {
+    @media (min-width: #{$min-vw}px) and (max-width: #{$max-vw}px) {
+        @content;
+    }
+}

@@ -1,0 +1,313 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.about-wrap {
+    min-height: 100vh;
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    @include max(1919) {
+        padding: 50px 0px;
+    }
+    @include max(1599) {
+        padding: 45px 0px;
+    }
+    @include max(767) {
+        padding: 30px 0px;
+    }
+    .border1 {
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.1);
+        inset: 0;
+        margin: auto;
+        left: calc(100% - 160px);
+        @include max(1919) {
+            left: calc(100% - 100px);
+        }
+        @include max(1599) {
+            left: calc(100% - 60px);
+        }
+        @include max(767) {
+            left: calc(100% - 30px);
+        }
+    }
+    .border2 {
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.1);
+        inset: 0;
+        margin: auto;
+        right: calc(100% - 160px);
+        @include max(1919) {
+            right: calc(100% - 105px);
+        }
+        @include max(1599) {
+            right: calc(100% - 63px);
+        }
+        @include max(767) {
+            right: calc(100% - 32px);
+        }
+    }
+    .border3 {
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.1);
+        inset: 0;
+        margin: 0 0 0 9%;
+        left: 50%;
+        @include max(767) {
+            left: 43%;
+        }
+    }
+    .about-content-wrap {
+        padding: 0 80px;
+        display: flex;
+        align-items: center;
+        @include max(1919) {
+            padding: 0 50px;
+        }
+        @include max(1599) {
+            padding: 0 30px;
+        }
+        @include max(991) {
+            flex-direction: column;
+        }
+        @include max(767) {
+            padding: 0 15px;
+        }
+        .left-wrap {
+            width: 60%;
+            flex: 0 0 auto;
+            padding: 0 20px 70px 0;
+            @include max(991) {
+                width: 100%;
+                padding: 0 0 30px 0;
+            }
+            .content-wrap {
+                max-width: 940px;
+                @include max(1919) {
+                    max-width: 850px;
+                }
+                @include max(1599) {
+                    max-width: 700px;
+                }
+                @include max(1399) {
+                    max-width: 630px;
+                }
+                @include max(991) {
+                    max-width: 100%;
+                }
+                .h2-title {
+                    font-size: 80px;
+                    color: #043d56;
+                    font-weight: 800;
+                    line-height: 1;
+                    padding: 0 0 120px 0;
+                    @include max(1919) {
+                        font-size: 70px;
+                        padding-bottom: 60px;
+                    }
+                    @include max(1599) {
+                        font-size: 60px;
+                        padding-bottom: 40px;
+                    }
+                    @include max(1399) {
+                        font-size: 50px;
+                        padding-bottom: 30px;
+                    }
+                    @include max(1199) {
+                        font-size: 40px;
+                        padding-bottom: 25px;
+                    }
+                    @include max(991) {
+                        font-size: 38px;
+                        padding-bottom: 20px;
+                    }
+                    @include max(767) {
+                        font-size: 36px;
+                        padding-bottom: 15px;
+                    }
+                    @include max(575) {
+                        font-size: 34px;
+                    }
+                }
+                .para {
+                    color: #043d56;
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 1.4;
+                    padding: 0 0 50px 0;
+                    @include max(1919) {
+                        font-size: 18px;
+                        padding-bottom: 40px;
+                    }
+                    @include max(1599) {
+                        font-size: 16px;
+                        padding-bottom: 30px;
+                    }
+                    @include max(1399) {
+                        font-size: 14px;
+                    }
+                }
+                .link {
+                    background: url(../../assets/images/link-4.svg) no-repeat;
+                    width: 182px;
+                    height: 51px;
+                    background-size: 100% 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #043d56;
+                    font-size: 16px;
+                    font-weight: 500;
+                    text-decoration: none;
+                    @include max(1919) {
+                        font-size: 14px;
+                        width: 140px;
+                        height: 40px;
+                    }
+                    @include max(1399) {
+                        font-size: 12px;
+                        width: 130px;
+                        height: 35px;
+                    }
+                    &:hover{color: #000;}
+                }
+            }
+        }
+        .right-wrap {
+            width: 40%;
+            flex: 0 0 auto;
+            padding-bottom: 70px;
+            @include max(991) {
+                width: 100%;
+                padding-bottom: 40px;
+            }
+            img {
+                display: block;
+                width: 709px;
+                @include max(1919) {
+                    width: 500px;
+                }
+                @include max(1599) {
+                    width: 450px;
+                }
+                @include max(1199) {
+                    width: 400px;
+                }
+                @include max(991) {
+                    width: 300px;
+                }
+            }
+        }
+    }
+    .about-footer-wrap {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 30px 80px 0 80px;
+        margin: 30px 0 0 0;
+        display: flex;
+        background: #fff;
+        @include max(1919) {
+            padding: 20px 50px 0 50px;
+        }
+        @include max(1599) {
+            padding: 15px 30px 0 30px;
+        }
+        @include max(767) {
+            padding: 15px 15px 0 15px;
+        }
+        .content-wrap {
+            max-width: 440px;
+            margin-left: 10px;
+            position: relative;
+            .num {
+                color: #0081c8;
+                font-size: 80px;
+                font-weight: 800;
+                line-height: 1;
+                position: absolute;
+                top: -100px;
+                z-index: -1;
+                @include max(1919) {
+                    font-size: 70px;
+                    top: -81px;
+                }
+                @include max(1599) {
+                    font-size: 60px;
+                    top: -66px;
+                }
+                @include max(1399) {
+                    font-size: 50px;
+                    top: -58px;
+                }
+                @include max(1199) {
+                    font-size: 45px;
+                    top: -54px;
+                }
+                @include max(991) {
+                    font-size: 40px;
+                    top: -50px;
+                }
+                @include max(575) {
+                    font-size: 35px;
+                }
+            }
+            .sub-title {
+                color: #043d56;
+                font-weight: 20px;
+                font-weight: 800;
+                line-height: 1;
+                padding-bottom: 20px;
+                text-transform: uppercase;
+                @include max(1919) {
+                    font-size: 18px;
+                    padding-bottom: 15px;
+                }
+                @include max(1599) {
+                    font-size: 16px;
+                }
+                @include max(1399) {
+                    font-size: 14px;
+                    padding-bottom: 10px;
+                }
+            }
+            .sub-para {
+                color: #043d56;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 1.2;
+                @include max(1919) {
+                    font-size: 18px;
+                }
+                @include max(1599) {
+                    font-size: 16px;
+                }
+                @include max(1399) {
+                    font-size: 14px;
+                }
+            }
+        }
+        .left-wrap {
+            width: 60%;
+            flex: 0 0 auto;
+            padding: 0 20px 0 0;
+            @include max(767) {
+                width: 50%;
+                padding-right: 10px;
+            }
+        }
+        .right-wrap {
+            width: 40%;
+            flex: 0 0 auto;
+            @include max(767) {
+                width: 50%;
+            }
+        }
+    }
+}

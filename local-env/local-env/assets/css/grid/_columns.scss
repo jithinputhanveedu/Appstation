@@ -1,0 +1,46 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.container{
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 100%;
+    @include max(1199){
+        max-width: 100%;
+    }
+    @include min(1200){
+        max-width: 1950px;
+    }
+}
+
+.row{
+    @include flexbox();
+    @include flex-wrap(wrap);
+    margin-left: -15px;
+    margin-right: -15px;
+    &.align-center{
+        @include align-items(center);
+    }
+    &.justify-center{
+        @include justify-content(center);
+    }
+    &.align-bottom{
+        @include align-items(flex-end);
+    }
+    &.align-top{
+        @include align-items(flex-start);
+    }
+    &.align-self-start{
+        align-self: flex-start;
+    }
+}
+
+[class^="col"]{
+    @include flex(0,0,100%);
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+}

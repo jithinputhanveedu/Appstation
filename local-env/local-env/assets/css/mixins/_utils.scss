@@ -1,0 +1,96 @@
+@mixin clearfix{
+    clear: both;
+    &:before,&:after{
+        content: '';
+        display: block;
+    }
+}
+@mixin transition($property: all, $funtion: ease, $time:0.35s) {
+    transition: $property $funtion $time;
+    -webkit-transition: $property $funtion $time;
+    -moz-transition: $property $funtion $time;
+    -ms-transition: $property $funtion $time;
+    -o-transition: $property $funtion $time;
+}
+@mixin transform($transforms...) {
+    // combine the passed transforms into a space separated list
+    $transform-list: join($transforms, null, space);
+
+    // print out the transforms 
+    -webkit-transform: $transform-list;
+    -moz-transform: $transform-list;
+    -ms-transform: $transform-list;
+    -o-transform: $transform-list;
+    transform: $transform-list;
+}
+@mixin translate($x: 0, $y: 0) {
+    transform: translate($x,$y);
+    -webkit-transform: translate($x,$y);
+    -moz-transform: translate($x,$y);
+    -ms-transform: translate($x,$y);
+    -o-transform: translate($x,$y);
+}
+@mixin translateX($x: 0) {
+    transform: translateX($x);
+    -webkit-transform: translateX($x);
+    -moz-transform: translateX($x);
+    -ms-transform: translateX($x);
+    -o-transform: translateX($x);
+}
+@mixin translateY($y: 0) {
+    transform: translateY($y);
+    -webkit-transform: translateY($y);
+    -moz-transform: translateY($y);
+    -ms-transform: translateY($y);
+    -o-transform: translateY($y);
+}
+@mixin rotate($deg:0deg){
+    transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+}
+@mixin scale($ratio...) {
+    -webkit-transform: scale($ratio);
+    -moz-transform: scale($ratio);
+    -ms-transform: scale($ratio);
+    -o-transform: scale($ratio);
+    transform: scale($ratio);
+}
+@mixin border-radius($pixel...) {
+    border-radius: $pixel;
+}
+@mixin triangle($direction:top, $color: currentcolor, $size: 1em){
+    width: 0;
+    height: 0;
+    content: '';
+    z-index: 2;
+    border-#{opposite-position($direction)}: ($size * 1.5) solid $color;
+    
+    $perpendicular-borders: $size solid transparent;
+    
+    @if $direction == top or $direction == bottom {
+        border-left:   $perpendicular-borders;
+        border-right:  $perpendicular-borders;
+    } @else if $direction == right or $direction == left {
+        border-bottom: $perpendicular-borders;
+        border-top:    $perpendicular-borders;
+    }
+}
+@mixin grayscale($value: 100%){
+    -webkit-filter: #{"grayscale(#{$value})"};
+    -moz-filter: #{"grayscale(#{$value})"};
+    filter:#{"grayscale(#{$value})"};
+}
+
+@mixin blur($value: 0) {
+    filter: blur(#{$value});
+    -webkit-filter: blur(#{$value});
+}
+
+@mixin placeholder{
+    &::-webkit-input-placeholder {@content}
+    &:-ms-input-placeholder {@content}
+    &::placeholder {@content}
+}

@@ -1,0 +1,396 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.banner-wrap {
+    padding: 43px 80px;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    @include max(1919) {
+        padding: 30px 50px;
+    }
+    @include max(1599) {
+        padding: 30px 30px;
+    }
+    @include max(767) {
+        padding: 20px 15px;
+    }
+    .bg-video {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+    .loading-wrap {
+        height: auto;
+        min-height: auto;
+        background: none;
+        padding: 0 80px;
+        position: absolute;
+        inset: auto 0 80px 0;
+        @include max(1919) {
+            padding: 0px 50px;
+            bottom: 50px;
+            bottom: 50px;
+        }
+        @include max(1599) {
+            padding: 0px 30px;
+            bottom: 30px;
+            bottom: 30px;
+        }
+        @include max(767) {
+            padding: 0px 15px;
+            bottom: 15px;
+            bottom: 15px;
+        }
+    }
+    .btn-content-wrap {
+        position: absolute;
+        margin: auto;
+        inset: auto 200px 135px auto;
+        @include max(1919) {
+            inset: auto 150px 90px auto;
+        }
+        @include max(1599) {
+            inset: auto 130px 80px auto;
+        }
+        @include max(1399) {
+            inset: auto 80px 70px auto;
+        }
+        @include max(991) {
+            inset: auto 30px 65px auto;
+        }
+        @include max(767) {
+            bottom: 55px;
+        }
+        @include max(575) {
+            bottom: 45px;
+        }
+        @include max(479) {
+            inset: auto 0 100px 0;
+        }
+        .txt {
+            text-align: right;
+            text-transform: uppercase;
+            font-size: 100px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1;
+            @include max(1919) {
+                font-size: 80px;
+            }
+            @include max(1599) {
+                font-size: 60px;
+            }
+            @include max(1399) {
+                font-size: 50px;
+            }
+            @include max(991) {
+                font-size: 40px;
+            }
+            @include max(767) {
+                font-size: 30px;
+            }
+            @include max(575) {
+                font-size: 28px;
+            }
+            @include max(479) {
+                text-align: center;
+            }
+            span {
+                img {
+                    width: 149px;
+                    @include max(1919) {
+                        width: 117px;
+                    }
+                    @include max(1599) {
+                        width: 88px;
+                    }
+                    @include max(1399) {
+                        width: 78px;
+                    }
+                    @include max(991) {
+                        width: 60px;
+                    }
+                    @include max(767) {
+                        width: 40px;
+                    }
+                }
+            }
+            &:nth-child(1) {
+                padding-right: 280px;
+                @include max(991) {
+                    padding-right: 130px;
+                }
+                @include max(479) {
+                    padding-right: 0;
+                }
+            }
+            &:nth-child(2) {
+                padding-right: 140px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                @include max(991) {
+                    padding-right: 65px;
+                }
+                @include max(479) {
+                    padding-right: 0;
+                }
+            }
+            &:nth-child(3) {
+            }
+        }
+    }
+    .header-wrap {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 999;
+        .logo-wrap {
+            .box {
+                width: 53px;
+                height: 90px;
+                background: #d9d9d9;
+                @include max(1919) {
+                    width: 40px;
+                    height: 80px;
+                }
+                @include max(1199) {
+                    width: 30px;
+                    height: 70px;
+                }
+                @include max(767) {
+                    width: 20px;
+                    height: 60px;
+                }
+            }
+        }
+        .menu-wrap {
+            display: flex;
+            justify-content: end;
+            .handburger-menu {
+                border-radius: 50%;
+                width: 59px;
+                height: 59px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(255, 255, 255, 0.19);
+                @include max(1919) {
+                    width: 50px;
+                    height: 50px;
+                }
+                @include max(1399) {
+                    width: 45px;
+                    height: 45px;
+                }
+                @include max(1199) {
+                    width: 40px;
+                    height: 40px;
+                }
+                @include max(767) {
+                    width: 35px;
+                    height: 35px;
+                }
+                img {
+                    display: block;
+                    width: 24px;
+                    @include max(1919) {
+                        width: 22px;
+                    }
+                    @include max(1199) {
+                        width: 20px;
+                    }
+                    @include max(767) {
+                        width: 18px;
+                    }
+                }
+            }
+            .menu-list {
+                background: rgba(255, 255, 255, 0.19);
+                border-radius: 50px;
+                height: 59px;
+                padding: 5px 30px;
+                transition: all 0.5s;
+                @include max(1919) {
+                    height: 50px;
+                }
+                @include max(1399) {
+                    height: 45px;
+                }
+                @include max(1199) {
+                    height: 40px;
+                    padding: 5px 15px;
+                }
+                @include max(991) {
+                    position: fixed;
+                    inset: 0 0 0 auto;
+                    width: 300px;
+                    height: 100vh;
+                    padding: 15px;
+                    border-radius: 0;
+                    z-index: 999;
+                    background: rgba(255, 255, 255, 0.8);
+                    opacity: 0;
+                    pointer-events: none;
+                    visibility: hidden;
+                    right: -300px;
+                    top: -20px;
+                }
+                ul {
+                    display: flex;
+                    height: 100%;
+                    align-items: center;
+                    @include max(991) {
+                        flex-direction: column;
+                        align-items: start;
+                        gap: 15px;
+                        padding: 40px 0 0 0;
+                    }
+                    li {
+                        list-style: none;
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        color: #ffffff;
+                        font-weight: 500;
+                        padding: 0 10px;
+                        @include max(1919) {
+                            font-size: 16px;
+                        }
+                        @include max(1399) {
+                            font-size: 14px;
+                        }
+                        @include max(991) {
+                            color: #043d56;
+                        }
+                        a {
+                            text-decoration: none;
+                            color: inherit;
+                            font-weight: inherit;
+                            &:hover{ color: #000;}
+                        }
+                    }
+                }
+                .close {
+                    position: absolute;
+                    right: 20px;
+                    top: 20px;
+                    max-width: 30px;
+                    opacity: 0;
+                    pointer-events: none;
+                    visibility: hidden;
+                    @include max(991) {
+                        opacity: 1;
+                        pointer-events: auto;
+                        visibility: visible;
+                    }
+                }
+            }
+            .acc-wrap {
+                margin: 0 0 0 20px;
+                height: 59px;
+                border-radius: 50px;
+                background: rgba(255, 255, 255, 0.19);
+                padding: 0 13px;
+                @include max(1919) {
+                    height: 50px;
+                }
+                @include max(1399) {
+                    height: 45px;
+                }
+                @include max(1199) {
+                    height: 40px;
+                    padding: 0px 15px;
+                    margin-left: 10px;
+                }
+                @include max(767) {
+                    height: 35px;
+                    padding: 0 15px;
+                }
+                ul {
+                    display: flex;
+                    height: 100%;
+                    align-items: center;
+                    gap: 10px;
+                    li {
+                        list-style: none;
+                        img {
+                            display: block;
+                            width: 39px;
+                            @include max(1919) {
+                                width: 35px;
+                            }
+                            @include max(767) {
+                                width: 30px;
+                            }
+                        }
+                        .search-wrap {
+                            display: flex;
+                            gap: 10px;
+                            padding: 0 30px 0 0;
+                            @include max(1199) {
+                                padding-right: 0px;
+                            }
+                            img {
+                                width: 17px;
+                                @include max(1919) {
+                                    width: 15px;
+                                }
+                                @include max(767) {
+                                    width: 13px;
+                                }
+                            }
+                            span {
+                                text-transform: uppercase;
+                                font-size: 16px;
+                                color: #ffffff;
+                                font-weight: 500;
+                                @include max(1919) {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dark-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    @include max(991) {
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 9;
+        transition: all 0.5s;
+    }
+}
+.menu-open {
+    .dark-bg {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+    }
+    .menu-list {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        visibility: visible !important;
+        right: -15px !important;
+    }
+    .logo-wrap,
+    .handburger-menu,
+    .acc-wrap {
+        @include max(991) {
+        opacity: 0 !important;
+        }
+    }
+}

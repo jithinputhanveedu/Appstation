@@ -1,0 +1,392 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.whats-wrap {
+    min-height: 100vh;
+    background: rgba(240, 236, 231);
+    padding: 100px 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @include max(1919) {
+        padding: 50px 50px;
+    }
+    @include max(1599) {
+        padding: 45px 30px;
+    }
+    @include max(767) {
+        padding: 30px 15px;
+    }
+    .head-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        padding-bottom: 85px;
+        @include max(1919) {
+            padding-bottom: 60px;
+        }
+        @include max(1599) {
+            padding-bottom: 40px;
+        }
+        @include max(479) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 20px;
+        }
+        .title {
+            font-size: 80px;
+            color: #043d56;
+            font-weight: 800;
+            line-height: 1;
+            @include max(1919) {
+                font-size: 70px;
+            }
+            @include max(1599) {
+                font-size: 60px;
+            }
+            @include max(1399) {
+                font-size: 50px;
+            }
+            @include max(1199) {
+                font-size: 45px;
+            }
+            @include max(991) {
+                font-size: 40px;
+            }
+            @include max(575) {
+                font-size: 35px;
+            }
+        }
+        .img {
+            width: 230px;
+            display: block;
+            @include max(1919) {
+                width: 200px;
+            }
+            @include max(1599) {
+                width: 180px;
+            }
+            @include max(1399) {
+                width: 160px;
+            }
+            @include max(1199) {
+                width: 150px;
+            }
+            @include max(575) {
+                width: 140px;
+            }
+        }
+    }
+    .carousel-outer-wrap {
+        .slider-nav-wt {
+            padding-bottom: 40px;
+            @include max(1919) {
+                padding-bottom: 30px;
+            }
+            @include max(1199) {
+                padding-bottom: 20px;
+            }
+            &.slick-slider {
+                .slick-list {
+                    padding: 0 !important;
+                    .slick-track {
+                        background: url(../../assets/images/dot-x.svg) repeat-x bottom center;
+                    }
+                    .slick-slide {
+                        font-size: 24px;
+                        font-weight: 500;
+                        color: rgba(22, 22, 22, 0.8);
+                        text-transform: uppercase;
+                        text-align: center;
+                        padding-bottom: 70px;
+                        background: url(../../assets/images/dot-month.svg) no-repeat bottom center;
+                        cursor: pointer;
+                        @include max(1919) {
+                            font-size: 20px;
+                            background-size: 190px;
+                        }
+                        @include max(1599) {
+                            font-size: 18px;
+                        }
+                        @include max(1399) {
+                            font-size: 16px;
+                        }
+                        @include max(1199) {
+                            font-size: 14px;
+                        }
+                        &.slick-current {
+                            background: url(../../assets/images/dot-active.svg) no-repeat bottom center;
+                            color: #8a1538;
+                            font-weight: 600;
+                            @include max(1919) {
+                                background-size: 190px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .event-outer-wrap {
+        .event-head-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 0 10px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            margin: 0 0 35px 0;
+            .sub-title {
+                color: #043d56;
+                font-size: 24px;
+                font-weight: 600;
+                text-transform: uppercase;
+                @include max(1919) {
+                    font-size: 22px;
+                }
+                @include max(1599) {
+                    font-size: 20px;
+                }
+                @include max(1199) {
+                    font-size: 18px;
+                }
+                @include max(767) {
+                    font-size: 16px;
+                }
+            }
+            .view-all {
+                color: #043d56;
+                font-size: 18px;
+                font-weight: 500;
+                text-transform: uppercase;
+                text-decoration: none;
+                @include max(1919) {
+                    font-size: 16px;
+                }
+                @include max(1599) {
+                    font-size: 14px;
+                }
+                @include max(767) {
+                    font-size: 12px;
+                }
+                &:hover{
+                    color: #000;
+                }
+            }
+        }
+        .event-content-wrap {
+            margin: 0 -15px;
+            .col-wrap {
+                width: 100%;
+                display: flex;
+                @include max(479) {
+                    flex-direction: column;
+                }
+                .img-wrap {
+                    width: 385px;
+                    @include max(1919) {
+                        width: 350px;
+                    }
+                    @include max(1599) {
+                        width: 330px;
+                    }
+                    @include max(1399) {
+                        width: 250px;
+                    }
+                    @include max(1199) {
+                        width: 230px;
+                    }
+                    @include max(575) {
+                        width: 200px;
+                    }
+                    @include max(479) {
+                        width: 100%;
+                        margin-bottom: 10px;
+                    }
+                    img {
+                        display: block;
+                    }
+                }
+                .txt-wrap {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 0 0 24px;
+                    @include max(1919) {
+                        padding-left: 20px;
+                    }
+                    @include max(479) {
+                        padding-left: 0;
+                    }
+                    .date {
+                        text-align: center;
+                        width: 72px;
+                        height: 72px;
+                        margin-bottom: 25px;
+                        background: #fff;
+                        font-size: 14px;
+                        color: #043d56;
+                        font-weight: 500;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        @include max(1919) {
+                            font-size: 12px;
+                            width: 60px;
+                            height: 60px;
+                            margin-bottom: 20px;
+                        }
+                        @include max(1199) {
+                            width: 50px;
+                            height: 50px;
+                            margin-bottom: 15px;
+                            font-size: 10px;
+                        }
+                        span {
+                            display: block;
+                            font-size: 24px;
+                            font-weight: 800;
+                            @include max(1919) {
+                                font-size: 20px;
+                            }
+                            @include max(1599) {
+                                font-size: 18px;
+                            }
+                            @include max(1399) {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    .event-title {
+                        font-size: 28px;
+                        color: #043d56;
+                        font-weight: 600;
+                        line-height: 1.2;
+                        padding: 0 0 30px 0;
+                        @include max(1919) {
+                            font-size: 24px;
+                            padding-bottom: 20px;
+                        }
+                        @include max(1599) {
+                            font-size: 22px;
+                        }
+                        @include max(1399) {
+                            font-size: 18px;
+                        }
+                        @include max(1199) {
+                            font-size: 16px;
+                            padding-bottom: 15px;
+                        }
+                    }
+                    .location-wrap {
+                        background: url(../../assets/images/map-pin.svg) no-repeat left 2px;
+                        color: #043d56;
+                        font-size: 18px;
+                        font-weight: 500;
+                        padding: 0 0 0 20px;
+                        @include max(1919) {
+                            font-size: 16px;
+                            background-size: 15px;
+                        }
+                        @include max(1599) {
+                            font-size: 14px;
+                            background-size: 13px;
+                            padding: 0 0 0 15px;
+                        }
+                        @include max(1199) {
+                            font-size: 12px;
+                        }
+                    }
+                    .link {
+                        color: #043d56;
+                        font-size: 18px;
+                        font-weight: 500;
+                        margin-top: auto;
+                        text-decoration: underline;
+                        text-transform: uppercase;
+                        @include max(1919) {
+                            font-size: 16px;
+                        }
+                        @include max(1599) {
+                            font-size: 14px;
+                        }
+                        @include max(1399) {
+                            font-size: 12px;
+                        }
+                        @include max(479) {
+                            margin-top: 10px;
+                        }
+                        &:hover{color: #000;}
+                    }
+                }
+            }
+        }
+        .events-progress-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 0 0 0;
+            @include max(1919) {
+                padding: 40px 0 0 0;
+            }
+            @include max(1599) {
+                padding: 30px 0 0 0;
+            }
+            @include max(767) {
+                padding: 20px 0 0 0;
+            }
+            .left-click,
+            .right-click {
+                display: flex;
+                gap: 10px;
+                img {
+                    width: 16px;
+                    @include max(1919) {
+                        width: 14px;
+                    }
+                    @include max(1399) {
+                        width: 12px;
+                    }
+                }
+                .num {
+                    font-size: 20px;
+                    color: #043d56;
+                    font-weight: 500;
+                    @include max(1919) {
+                        font-size: 18px;
+                    }
+                    @include max(1399) {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .left-click {
+                img {
+                    transform: rotate(180deg);
+                }
+            }
+            .progress-wrap {
+                width: 300px;
+                height: 4px;
+                background: rgba(4, 61, 86, 0.2);
+                margin: 0 5px;
+                @include max(1919) {
+                    width: 250px;
+                }
+                @include max(1599) {
+                    width: 200px;
+                }
+                @include max(479) {
+                    width: 150px;
+                }
+                span {
+                    display: block;
+                    width: 30%;
+                    height: 100%;
+                    background: #043d56;
+                }
+            }
+        }
+    }
+}

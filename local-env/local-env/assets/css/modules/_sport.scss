@@ -1,0 +1,461 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.sports-wrap {
+    padding: 90px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+    @include max(1919) {
+        padding: 50px 0px 0px 0px;
+    }
+    @include max(1599) {
+        padding: 45px 0px 0px 0px;
+    }
+    @include max(767) {
+        padding: 30px 0px 0px 0px;
+    }
+    .title-wrap {
+        text-align: center;
+        font-size: 145px;
+        color: #043d56;
+        font-weight: 800;
+        line-height: 1;
+        padding-bottom: 50px;
+        @include max(1919) {
+            font-size: 130px;
+            padding-bottom: 30px;
+        }
+        @include max(1599) {
+            font-size: 110px;
+            padding-bottom: 20px;
+        }
+        @include max(1399) {
+            font-size: 90px;
+        }
+        @include max(1199) {
+            font-size: 80px;
+        }
+        @include max(991) {
+            font-size: 70px;
+        }
+        @include max(575) {
+            font-size: 60px;
+        }
+        @include max(479) {
+            font-size: 55px;
+        }
+    }
+
+    .sports-slider-wrap {
+        display: flex;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        .left-wrap {
+            width: 70%;
+            flex: 0 0 auto;
+            @include max(1199) {
+                width: 75%;
+            }
+            @include max(767) {
+                padding: 0;
+                width: 65%;
+                border-right: 1px solid rgba(0, 0, 0, 0.1);
+            }
+            .sports-for-wt {
+                height: 100%;
+                .slick-list {
+                    height: 100%;
+                    .slick-track {
+                        height: 100%;
+                    }
+                }
+            }
+            .slick-slide {
+                display: flex;
+                align-items: center;
+                @include max(767) {
+                    flex-direction: column;
+                }
+            }
+            .grid-wrap {
+                border-right: 1px solid rgba(0, 0, 0, 0.1);
+                width: 45%;
+                flex: 0 0 auto;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                @include max(767) {
+                    width: 100%;
+                    height: auto;
+                    border-right: 0;
+                }
+                .grid-col {
+                    padding: 80px;
+                    @include max(1919) {
+                        padding: 50px;
+                    }
+                    @include max(1599) {
+                        padding: 30px;
+                    }
+                    @include max(991) {
+                        padding-right: 10px;
+                    }
+                    @include max(767) {
+                        padding: 15px;
+                    }
+                    .content-wrap {
+                        img {
+                            margin: 0 0 20px 0;
+                            width: 49px;
+                            @include max(1919) {
+                                width: 40px;
+                                margin-bottom: 15px;
+                            }
+                            @include max(1599) {
+                                width: 35px;
+                            }
+                            @include max(1399) {
+                                width: 30px;
+                            }
+                            @include max(767) {
+                                width: 20px;
+                            }
+                        }
+                        .sub-title {
+                            font-size: 24px;
+                            color: #043d56;
+                            font-weight: 800;
+                            line-height: 1.2;
+                            padding: 0 0 30px 0;
+                            @include max(1919) {
+                                font-size: 20px;
+                                padding-bottom: 20px;
+                            }
+                            @include max(1599) {
+                                font-size: 18px;
+                            }
+                            @include max(1399) {
+                                font-size: 16px;
+                            }
+                            @include max(767) {
+                                padding-bottom: 10px;
+                            }
+                        }
+                        .para {
+                            font-size: 18px;
+                            color: #043d56;
+                            line-height: 1.4;
+                            font-weight: 500;
+                            padding: 0 0 55px 0;
+                            @include max(1919) {
+                                font-size: 16px;
+                                padding-bottom: 40px;
+                            }
+                            @include max(1599) {
+                                font-size: 14px;
+                            }
+                            @include max(767) {
+                                font-size: 12px;
+                                padding-bottom: 20px;
+                            }
+                        }
+                        .link {
+                            text-decoration: underline;
+                            text-transform: uppercase;
+                            font-size: 18px;
+                            color: #043d56;
+                            font-weight: 500;
+                            @include max(1919) {
+                                font-size: 16px;
+                            }
+                            @include max(1599) {
+                                font-size: 14px;
+                            }
+                            @include max(767) {
+                                font-size: 12px;
+                            }
+                            &:hover{
+                                color: #000;
+                            }
+                        }
+                    }
+                    & + .grid-col {
+                        border-top: 1px solid rgba(0, 0, 0, 0.1);
+                    }
+
+                    .more-details-wrap {
+                        .head-wrap {
+                            display: flex;
+                            gap: 10px;
+                            padding: 0 0 24px 0;
+                            @include max(1919) {
+                                padding-bottom: 20px;
+                            }
+                            .logo {
+                                width: 60px;
+                                @include max(1919) {
+                                    width: 50px;
+                                }
+                                @include max(1399) {
+                                    width: 40px;
+                                }
+                                @include max(767) {
+                                    width: 30px;
+                                }
+                            }
+                            .txt-wrap {
+                                .more-title {
+                                    font-size: 20px;
+                                    color: #000000;
+                                    font-weight: 700;
+                                    padding: 0 0 5px 0;
+                                    @include max(1919) {
+                                        font-size: 18px;
+                                        padding: 0 0 3px 0;
+                                    }
+                                    @include max(1599) {
+                                        font-size: 16px;
+                                    }
+                                    @include max(1399) {
+                                        font-size: 14px;
+                                    }
+                                }
+                                .place {
+                                    font-size: 14px;
+                                    color: rgba(0, 0, 0, 0.6);
+                                    font-family: $secFont;
+                                    @include max(1919) {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                            .ex {
+                                width: 20px;
+                                margin-bottom: auto;
+                                @include max(1919) {
+                                    width: 18px;
+                                }
+                            }
+                        }
+                        .link-wrap {
+                            display: flex;
+                            gap: 10px;
+                            a {
+                                height: 40px;
+                                border: 1px solid rgba(70, 79, 93, 0.3);
+                                padding: 5px 12px;
+                                display: flex;
+                                align-items: center;
+                                text-decoration: none;
+                                @include max(1919) {
+                                    height: 34px;
+                                    padding: 5px 10px;
+                                }
+                                span {
+                                    font-size: 14px;
+                                    color: #464f5d;
+                                    font-weight: 700;
+                                    line-height: 1;
+                                    padding-left: 5px;
+                                    @include max(1919) {
+                                        font-size: 12px;
+                                    }
+                                }
+                                img {
+                                    @include max(1919) {
+                                        transform: scale(0.9);
+                                    }
+                                }
+                                &.black {
+                                    background: #1b2442;
+                                    span {
+                                        color: #fff;
+                                    }
+                                }
+                                &:hover{
+                                    opacity: .7;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .video-wrap {
+                width: 55%;
+                flex: 0 0 auto;
+                padding: 10px 0;
+                @include max(767) {
+                    width: 100%;
+                    height: auto;
+                    border-top: 1px solid rgba(0, 0, 0, 0.1);
+                }
+                img {
+                    margin: 0 0 0 1px;
+                }
+            }
+        }
+        .nav-wrap {
+            width: 30%;
+            flex: 0 0 auto;
+            padding: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @include max(1919) {
+                padding: 50px;
+            }
+            @include max(1599) {
+                padding: 30px;
+            }
+            @include max(1199) {
+                width: 25%;
+            }
+            @include max(767) {
+                padding: 15px;
+                width: 35%;
+            }
+            .view-txt {
+                font-size: 18px;
+                color: #043d56;
+                font-weight: 500;
+                text-transform: uppercase;
+                padding: 0 0 30px 0;
+                text-align: right;
+                @include max(1919) {
+                    font-size: 16px;
+                    padding-bottom: 20px;
+                }
+                @include max(1599) {
+                    font-size: 14px;
+                }
+                @include max(767) {
+                    font-size: 12px;
+                }
+                a {
+                    color: #043d56;
+                    text-decoration: none;
+                    &:hover{
+                        color: #000;
+                    }
+                }
+            }
+            .arrow-top {
+                text-align: right;
+                padding: 10px 0;
+                img {
+                    width: 113px;
+                    @include max(1919) {
+                        max-width: 100px;
+                    }
+                }
+            }
+            .arrow-btm {
+                text-align: right;
+                padding: 10px 0;
+                img {
+                    width: 113px;
+                    @include max(1919) {
+                        max-width: 100px;
+                    }
+                    @include max(1599) {
+                        max-width: 80px;
+                    }
+                }
+            }
+            .sports-nav-wt {
+                .slick-list {
+                    padding: 0 !important;
+                    .slick-track {
+                        .slick-slide {
+                            width: 100% !important;
+                            opacity: 0.4;
+                            cursor: pointer;
+                            padding: 15px 0;
+                            @include max(1919) {
+                                padding: 13px 0;
+                            }
+                            @include max(1599) {
+                                padding: 8px 0;
+                            }
+                            &.slick-current {
+                                opacity: 1;
+                                .slide-nav {
+                                    img {
+                                    }
+                                    span {
+                                    }
+                                    .line {
+                                        width: 140px;
+                                        @include max(1199) {
+                                            width: 80px;
+                                        }
+                                        @include max(575) {
+                                            width: 50px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .slide-nav {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    justify-content: end;
+                    transition: all 0.5s;
+                    img {
+                        max-width: 32px;
+                        @include max(1919) {
+                            max-width: 28px;
+                        }
+                        @include max(1599) {
+                            max-width: 25px;
+                        }
+                        @include max(1199) {
+                            max-width: 20px;
+                        }
+                        @include max(575) {
+                            max-width: 15px;
+                        }
+                        @include max(479) {
+                            display: none;
+                        }
+                    }
+                    span {
+                        font-size: 20px;
+                        color: #161616;
+                        font-weight: 500;
+                        transition: all 0.5s;
+                        @include max(1919) {
+                            font-size: 18px;
+                        }
+                        @include max(1599) {
+                            font-size: 16px;
+                        }
+                        @include max(1399) {
+                            font-size: 14px;
+                        }
+                        @include max(575) {
+                            font-size: 12px;
+                        }
+                    }
+                    .line {
+                        width: 37px;
+                        height: 1px;
+                        background: #000000;
+                        transition: all 0.5s;
+                        @include max(1199) {
+                            width: 30px;
+                        }
+                        @include max(575) {
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

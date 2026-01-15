@@ -1,0 +1,156 @@
+@use "../mixins" as *;
+
+.animate{
+    @include min(991){
+        opacity: 0;
+        &.active{
+            &.fadeIn{
+                animation: fadeIn 1.5s 0s 1 forwards;
+            }
+            &.fadeUp{
+                animation: fadeUp 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s 1 forwards;
+            }
+            &.fadeDown{
+                animation: fadeDown 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s 1 forwards;
+            }
+            &.fadeRight{
+                animation: fadeRight 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s 1 forwards;
+            }
+            &.fadeLeft{
+                animation: fadeLeft 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s 1 forwards;
+            }
+            &.fadeUpSmall{
+                animation: fadeUpSmall 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s 1 forwards;
+            }
+            &.fadeDownSmall{
+                animation: fadeDownSmall 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s 1 forwards;
+            }
+            &.fadeRightSmall{
+                animation: fadeRightSmall 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s 1 forwards;
+            }
+            &.fadeLeftSmall{
+                animation: fadeLeftSmall 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s 1 forwards;
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        @include scale(0.5,0.5)
+    }
+    50% {
+        opacity: 0.5;
+        @include scale(1.75,1.75)
+    }
+    100% {
+        opacity: 0;
+        @include scale(1.75,1.75)
+    }
+}
+@keyframes pulse2 {
+    0% {
+        opacity: 1;
+        @include scale(0.5,0.5)
+    }
+    50% {
+        opacity: 0.5;
+        @include scale(1.5,1.5)
+    }
+    100% {
+        opacity: 0;
+        @include scale(1.5,1.5)
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        @include translateY(300px);
+    }
+    100% {
+        opacity: 1;
+        @include translateY(0px);
+    }
+}
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        @include translateY(-300px);
+    }
+    100% {
+        opacity: 1;
+        @include translateY(0px);
+    }
+}
+@keyframes fadeRight {
+    0% {
+        opacity: 0;
+        @include translateX(-300px);
+    }
+    100% {
+        opacity: 1;
+        @include translateX(0px);
+    }
+}
+@keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        @include translateX(300px);
+    }
+    100% {
+        opacity: 1;
+        @include translateX(0px);
+    }
+}
+
+@keyframes fadeUpSmall {
+    0% {
+        opacity: 0;
+        @include translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        @include translateY(0px);
+    }
+}
+@keyframes fadeDownSmall {
+    0% {
+        opacity: 0;
+        @include translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        @include translateY(0px);
+    }
+}
+@keyframes fadeRightSmall {
+    0% {
+        opacity: 0;
+        @include translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        @include translateX(0px);
+    }
+}
+@keyframes fadeLeftSmall {
+    0% {
+        opacity: 0;
+        @include translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        @include translateX(0px);
+    }
+}
